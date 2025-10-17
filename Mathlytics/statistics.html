@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Mathlytics – Статистика</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Mathlytics Logo" width="150">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="linearalgebra.html">Лінійна алгебра</a></li>
+        <li><a href="statistics.html">Статистика</a></li>
+        <li><a href="graphic.html">Графіки</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="statistics-calculator">
+    <h2>Статистичний калькулятор</h2>
+
+    <div class="sample-inputsX">
+      <div>
+        <h3>Вибірка X</h3>
+        <textarea id="sampleX" rows="4" placeholder="Введіть числа через кому"></textarea>
+      </div>
+    </div>      
+    <div class="statistics-actions">
+      <button onclick="calculateMeanMedianMode()">Середнє / Медіана / Мода</button>
+      <button onclick="calculateVarianceStd()">Дисперсія / Стандартне відхилення</button>
+    </div>
+
+    <div class="sample-inputsY">
+      <div>
+        <h3>Вибірка Y</h3>
+        <textarea id="sampleY" rows="4" placeholder="Введіть числа через кому"></textarea>
+      </div>
+    </div> 
+    <div class="statistics-actions">
+      <button onclick="calculateMeanMedianMode()">Середнє / Медіана / Мода</button>
+      <button onclick="calculateVarianceStd()">Дисперсія / Стандартне відхилення</button>
+    </div>
+
+    <div>
+      <h3>Залежність вибірок</h3>
+      <button onclick="calculateCorrelation()">Обчислити кореляцію</button>
+      <button onclick="calculateRegression()">Побудувати регресію</button>
+    </div>
+
+    <section class="results">
+      <h4>Результати</h4>
+      <textarea id="results" readonly rows="6" placeholder="Тут з’являться результати..."></textarea>
+      <br><button>Переглянути кроки обчислень</button>
+    </section>
+  </section>
+
+</body>
+</html>

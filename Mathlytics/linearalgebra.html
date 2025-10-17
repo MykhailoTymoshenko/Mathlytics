@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Mathlytics – Лінійна алгебра</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Mathlytics Logo" width="150">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="linearalgebra.html">Лінійна алгебра</a></li>
+        <li><a href="statistics.html">Статистика</a></li>
+        <li><a href="graphic.html">Графіки</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Калькулятор матриць</h2>
+    <p>Введіть елементи матриць нижче.</p>
+
+    <section class="matrix-section">
+      <div class="matrix-container">
+        <h3>Матриця A</h3>
+        <table class="matrix">
+          <tr>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+        </table>
+      </div>
+
+
+      <section class="matrix-actions">
+          <h3>Операції над матрицею</h3>
+          <button>Визначник</button>
+          <button>Обернена матриця</button>
+          <button>Ранг</button>
+          <button>Власні числа / вектори</button>
+      </section>
+      <br>
+      <div class="matrix-operations">
+        <button>+</button>
+        <button>−</button>
+        <button>×</button>
+      </div>
+      <div class="matrix-container">
+          <a>Матриці мають бути з лівого і правого боків сторінки,
+              але це задача для наступної лабораторної</a>
+          <h3>Матриця B</h3> 
+        <table class="matrix">
+          <tr>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="matrix-actions">
+      <h3>Операції над матрицею</h3>
+      <button>Визначник</button>
+      <button>Обернена матриця</button>
+      <button>Ранг</button>
+      <button>Власні числа / вектори</button>
+    </section>
+
+    <section class="results">
+      <br><br>
+      <h4>Результати</h4>
+      <textarea readonly rows="6" placeholder="Тут з’являться результати обчислень..."></textarea><br>
+      <button>Переглянути кроки обчислень</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mathlytics</p>
+  </footer>
+</body>
+</html>

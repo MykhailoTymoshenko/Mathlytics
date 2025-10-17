@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Mathlytics – Графік</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Mathlytics Logo" width="150">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="linearalgebra.html">Лінійна алгебра</a></li>
+        <li><a href="statistics.html">Статистика</a></li>
+        <li><a href="graphic.html">Графіки</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <section class="function-graph">
+    <h2>Графіки функцій</h2>
+
+    <div class="function-input">
+      <label>Функція f(x):</label>
+      <input type="text" id="functionInput" placeholder="Наприклад: x^2 + 2*x + 1">
+      <label>Інтервал x:</label>
+      <input type="number" id="xStart" placeholder="Початок">
+      <input type="number" id="xEnd" placeholder="Кінець">
+    </div>
+
+    <div class="graph-actions">
+      <button onclick="plotFunction()">Побудувати графік</button>
+      <button onclick="findExtremums()">Знайти екстремуми</button>
+    </div>
+
+    <canvas id="functionCanvas" width="600" height="400"></canvas>
+
+    <section class="results">
+      <h4>Результати екстремумів</h4>
+      <textarea id="extremumResults" readonly rows="4" placeholder="Тут з’являться координати максимумів та мінімумів..."></textarea>
+      <br><button>Переглянути кроки обчислень</button>
+    </section>
+  </section>
+
+</body>
+</html>
