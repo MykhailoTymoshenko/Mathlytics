@@ -24,16 +24,27 @@ Mathlytics is a web-based platform that provides a set of mathematical and stati
 
 ## Project Structure
 /Mathlytics
+
 ├── index.html # Home page
+
 ├── about.html # About the project
+
 ├── contacts.html # Contact form
+
 ├── linearalgebra.html # Matrix calculator page
+
 ├── statistics.html # Statistical calculator page
+
 ├── graphic.html # Function graphing page
+
 ├── /css # Stylesheets
-│ └── style.css
+
+│ └── style.css #In future
+
 ├── /js # JavaScript files for calculators and graphing
-│ └── main.js
-└── /images # Images, including logos
+
+│ └── main.js #In future
+
+└── /images # Images, including logo
 
 Author - Mykhailo Tymoshenko. This project is for educational purposes.
