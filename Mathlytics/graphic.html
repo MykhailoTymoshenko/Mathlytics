@@ -2,15 +2,23 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathlytics – Графік</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
-    </a>
-    <nav>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
+      </a>
+    </div>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+      <label for="burger-toggle" class="burger-menu">☰</label>
+
+    <nav class="header-right">
       <ul>
         <li><a href="index.html">Головна</a></li>
         <li><a href="linearalgebra.html">Матричний калькулятор</a></li>
@@ -19,31 +27,61 @@
       </ul>
     </nav>
   </header>
-    
-  <section class="function-graph">
-    <h2>Графіки функцій</h2>
 
-    <div class="function-input">
-      <label>Функція f(x):</label>
-      <input type="text" id="functionInput" placeholder="Наприклад: x^2 + 2*x + 1">
-      <label>Інтервал x:</label>
-      <input type="number" id="xStart" placeholder="Початок">
-      <input type="number" id="xEnd" placeholder="Кінець">
+  <main class="graphics-calculator">
+      <h2>Графіки функцій</h2>
+
+      <div class="graphics-input-section">
+          <div class="graphic-input-container">
+              <h3>Параметри функції</h3>
+
+              <div class="function-input-group">
+                  <label for="functionInput">Функція f(x):</label>
+                  <input type="text" id="functionInput" class="function-input" placeholder="Наприклад: x^2 + 2*x + 1">
+              </div>
+
+              <div class="interval-input-group">
+                  <label>Інтервал x:</label>
+                  <div class="interval-inputs">
+                      <input type="number" id="xStart" class="interval-start" placeholder="Початок">
+                      <span class="interval-separator">—</span>
+                      <input type="number" id="xEnd" class="interval-end" placeholder="Кінець">
+                  </div>
+              </div>
+          </div>
+
+          <div class="graphics-actions">
+              <button>Побудувати графік</button>
+              <button>Знайти екстремуми</button>
+          </div>
+      </div>
+
+      <div class="graphic-results">
+          <div class="canvas-container">
+              <canvas id="functionCanvas" class="function-canvas" width="600" height="400"></canvas>
+          </div>
+
+          <section class="graphics-extrema">
+              <h4>Результати екстремумів</h4>
+              <textarea id="extremumResults" class="extremum-results" readonly rows="4"
+                        placeholder="Тут з'являться координати максимумів та мінімумів..."></textarea>
+              <br>
+              <button>Переглянути кроки обчислень</button>
+          </section>
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <ul>
+        <li><a href="about.html">Про проєкт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
     </div>
-
-    <div class="graph-actions">
-      <button onclick="plotFunction()">Побудувати графік</button>
-      <button onclick="findExtremums()">Знайти екстремуми</button>
+    <div class="footer-right">
+      <p>&copy; 2025 Mathlytics</p>
     </div>
-
-    <canvas id="functionCanvas" width="600px" height="400px"></canvas>
-
-    <section class="results">
-      <h4>Результати екстремумів</h4>
-      <textarea id="extremumResults" readonly rows="4" placeholder="Тут з’являться координати максимумів та мінімумів..."></textarea>
-      <br><button>Переглянути кроки обчислень</button>
-    </section>
-  </section>
+  </footer>
 
 </body>
 </html>

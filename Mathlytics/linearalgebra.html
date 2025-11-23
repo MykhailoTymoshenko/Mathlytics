@@ -2,15 +2,23 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathlytics – Лінійна алгебра</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
-    </a>
-    <nav>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
+      </a>
+    </div>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+      <label for="burger-toggle" class="burger-menu">☰</label>
+
+    <nav class="header-right">
       <ul>
         <li><a href="index.html">Головна</a></li>
         <li><a href="linearalgebra.html">Матричний калькулятор</a></li>
@@ -21,65 +29,60 @@
   </header>
 
   <main>
-    <h2>Калькулятор матриць</h2>
-    <p>Введіть елементи матриць нижче.</p>
+  <section class="matrix-calculator">
+    <div class="matrix-header">
+      <h2>Калькулятор матриць</h2>
+      <p>Введіть елементи матриць нижче.</p>
+    </div>
 
-    <section class="matrix-section">
-      <div class="matrix-container">
-        <h3>Матриця A</h3>
-        <table class="matrix">
-          <tr>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-          </tr>
-          <tr>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-          </tr>
-        </table>
-      </div>
+    <div class="matrix-section">
+      <div class="matrices-row">
+	<div class="matrix-plus-actions">
+        <div class="matrix-container">
+          <h3>Матриця A</h3>
+        <div class="matrix-table">
+          <input type="text"><input type="text"><input type="text">
+          <input type="text"><input type="text"><input type="text">
+    	  <input type="text"><input type="text"><input type="text">
+  	</div>
+        </div>
 
-
-      <section class="matrix-actions">
-          <h3>Операції над матрицею</h3>
+        <div class="matrix-actions">
           <button>Визначник</button>
           <button>Обернена матриця</button>
           <button>Ранг</button>
           <button>Власні числа / вектори</button>
-      </section>
-      <br>
-      <div class="matrix-operations">
-        <button>+</button>
-        <button>−</button>
-        <button>×</button>
-      </div>
-      <div class="matrix-container">
-          <a>Матриці мають бути з лівого і правого боків сторінки,
-              але це задача для наступної лабораторної</a>
+        </div>
+        </div>
+  
+        <div class="matrix-operations">
+          <button>+</button>
+          <button>−</button>
+          <button>×</button>
+        </div>
+	
+	<div class="matrix-plus-actions">
+        <div class="matrix-container">
           <h3>Матриця B</h3> 
-        <table class="matrix">
-          <tr>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-          </tr>
-          <tr>
-            <td><input type="number"></td>
-            <td><input type="number"></td>
-          </tr>
-        </table>
+        <div class="matrix-table">
+          <input type="text"><input type="text"><input type="text">
+          <input type="text"><input type="text"><input type="text">
+    	  <input type="text"><input type="text"><input type="text">
+  	</div>
+        </div>
+
+      <div class="matrix-actions">
+        <button>Визначник</button>
+        <button>Обернена матриця</button>
+        <button>Ранг</button>
+        <button>Власні числа / вектори</button>
       </div>
-    </section>
 
-    <section class="matrix-actions">
-      <h3>Операції над матрицею</h3>
-      <button>Визначник</button>
-      <button>Обернена матриця</button>
-      <button>Ранг</button>
-      <button>Власні числа / вектори</button>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="results">
-      <br><br>
+    <section class="matrix-results">
       <h4>Результати</h4>
       <textarea readonly rows="6" placeholder="Тут з’являться результати обчислень..."></textarea><br>
       <button>Переглянути кроки обчислень</button>
@@ -87,7 +90,15 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Mathlytics</p>
+    <div class="footer-left">
+      <ul>
+        <li><a href="about.html">Про проєкт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <p>&copy; 2025 Mathlytics</p>
+    </div>
   </footer>
 </body>
 </html>

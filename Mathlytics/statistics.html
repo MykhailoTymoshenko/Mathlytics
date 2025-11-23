@@ -2,15 +2,23 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathlytics – Статистика</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
-    </a>
-    <nav>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Mathlytics Logo" width="150px">
+      </a>
+    </div>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+      <label for="burger-toggle" class="burger-menu">☰</label>
+
+    <nav class="header-right">
       <ul>
         <li><a href="index.html">Головна</a></li>
         <li><a href="linearalgebra.html">Матричний калькулятор</a></li>
@@ -20,43 +28,66 @@
     </nav>
   </header>
 
-  <section class="statistics-calculator">
+  <main class="stats-calculator">
     <h2>Статистичний калькулятор</h2>
 
-    <div class="sample-inputsX">
-      <div>
-        <h3>Вибірка X</h3>
-        <textarea id="sampleX" rows="4" placeholder="Введіть числа через кому"></textarea>
+      <div class="samples-row">
+          <div class="sample-plus-actions">
+              <div class="sample-container">
+                  <h3>Вибірка X</h3>
+                  <textarea id="input-x" placeholder="Наприклад: 5, 10, 15, 20, 25"></textarea>
+              </div>
+              <div class="sample-actions">
+                  <button data-action="mean">Середнє</button>
+                  <button data-action="median">Медіана</button>
+                  <button data-action="mode">Мода</button>
+                  <button data-action="variance">Дисперсія</button>
+                  <button data-action="stddev">Ст. відхилення</button>
+                  <button data-action="cv">Коеф. варіації</button>
+                  <button class="calc-all">Обчислити всі</button>
+              </div>
+          </div>
+
+          <div class="sample-operations">
+              <button id="calc-correlation">Кореляція</button>
+              <button id="calc-regression">Регресія</button>
+          </div>
+
+          <div class="sample-plus-actions">
+              <div class="sample-container">
+                  <h3>Вибірка Y</h3>
+                  <textarea id="input-y" placeholder="Наприклад: 1, 2, 3, 4, 5"></textarea>
+              </div>
+              <div class="sample-actions">
+                  <button data-action="mean">Середнє</button>
+                  <button data-action="median">Медіана</button>
+                  <button data-action="mode">Мода</button>
+                  <button data-action="variance">Дисперсія</button>
+                  <button data-action="stddev">Ст. відхилення</button>
+                  <button data-action="cv">Коеф. варіації</button>
+                  <button class="calc-all">Обчислити всі</button>
+              </div>
+          </div>
       </div>
-    </div>      
-    <div class="statistics-actions">
-      <button onclick="calculateMeanMedianMode()">Середнє / Медіана / Мода</button>
-      <button onclick="calculateVarianceStd()">Дисперсія / Стандартне відхилення</button>
-    </div>
 
-    <div class="sample-inputsY">
-      <div>
-        <h3>Вибірка Y</h3>
-        <textarea id="sampleY" rows="4" placeholder="Введіть числа через кому"></textarea>
-      </div>
-    </div> 
-    <div class="statistics-actions">
-      <button onclick="calculateMeanMedianMode()">Середнє / Медіана / Мода</button>
-      <button onclick="calculateVarianceStd()">Дисперсія / Стандартне відхилення</button>
-    </div>
-
-    <div>
-      <h3>Залежність вибірок</h3>
-      <button onclick="calculateCorrelation()">Обчислити кореляцію</button>
-      <button onclick="calculateRegression()">Побудувати регресію</button>
-    </div>
-
-    <section class="results">
+    <section class="stats-results">
       <h4>Результати</h4>
       <textarea id="results" readonly rows="6" placeholder="Тут з’являться результати..."></textarea>
       <br><button>Переглянути кроки обчислень</button>
     </section>
-  </section>
+  </main>
+  
+  <footer>
+    <div class="footer-left">
+      <ul>
+        <li><a href="about.html">Про проєкт</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <p>&copy; 2025 Mathlytics</p>
+    </div>
+  </footer>
 
 </body>
 </html>
