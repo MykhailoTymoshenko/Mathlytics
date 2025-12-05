@@ -22,6 +22,14 @@ Mathlytics is a web-based platform that provides a set of mathematical and stati
 ### Contact Form
 - Users can submit feedback or questions directly through the site.
 
+### UI/UX Features
+- Dynamic date display in footer
+- Expandable content sections (accordion)
+- Interactive navigation with hover effects
+- Keyboard shortcuts (ArrowUp/ArrowDown for font size)
+- Responsive design with mobile hamburger menu
+- Visual feedback for all interactions
+
 ## Project Structure
 /Mathlytics
 
@@ -51,7 +59,13 @@ Mathlytics is a web-based platform that provides a set of mathematical and stati
 
 ├── /js # JavaScript files for calculators and graphing
 
-│ └── main.js #In future
+│ ├── main.js # Core functionality (DOM manipulation, events, validation)
+
+│ ├── matrix-calc.js # Matrix calculator logic
+
+│ ├── stats-calc.js # Statistical calculator logic
+
+│ └── graphic-calc.js # Function graphing logic
 
 └── /images # Images, including logo
 
@@ -80,6 +94,45 @@ Mathlytics is a web-based platform that provides a set of mathematical and stati
 - **Adaptive Grids** - Single-column layouts on mobile;
 - **Flexible Images** - Responsive canvas and media;
 - **Touch-friendly Interfaces** - Appropriate button sizes and spacing;
+
+### **JavaScript Functionality**
+
+#### **DOM Manipulation**
+- Element creation and insertion (`createElement()`, `append()`)
+- Dynamic content updates
+- Style manipulation via JavaScript classes
+- Event delegation pattern
+
+#### **Event Handling**
+- Mouse events (click, hover)
+- Keyboard events (ArrowUp/ArrowDown for font size)
+- Form submission events with `preventDefault()`
+- Window resize events for responsive canvas
+
+#### **Form Validation**
+- Custom validation logic for contact form
+- Real-time field validation
+- Error message display with visual feedback
+- Success state handling
+
+#### **Mathematical Computation**
+- Matrix operations using math.js library
+- Statistical formulas implemented in pure JavaScript
+- Mathematical expression parsing and evaluation
+- Numerical methods for extrema detection
+
+#### **Data Visualization**
+- HTML5 Canvas for function graphing
+- Coordinate system transformation
+- Adaptive scaling and grid drawing
+- Interactive point highlighting
+
+### **Responsive Features**
+- **Mobile-first approach** with progressive enhancement
+- **Hamburger menu** for mobile navigation
+- **Adaptive layouts** (single-column on mobile, multi-column on desktop)
+- **Responsive canvas** that adapts to container size
+- **Touch-friendly interfaces** with appropriate button sizing
 
 ### Cross-browser Compatibility
 - Tested and optimized for:
