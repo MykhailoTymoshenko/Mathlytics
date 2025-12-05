@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
   <header>
     <div class="header-left">
@@ -47,7 +48,7 @@
   	</div>
         </div>
 
-        <div class="matrix-actions">
+        <div class="matrix-actions" data-matrix="A">
           <button>Визначник</button>
           <button>Обернена матриця</button>
           <button>Ранг</button>
@@ -61,7 +62,7 @@
           <button>×</button>
         </div>
 	
-	<div class="matrix-plus-actions">
+	<div class="matrix-plus-actions" data-matrix="B">
         <div class="matrix-container">
           <h3>Матриця B</h3> 
         <div class="matrix-table">
@@ -79,6 +80,7 @@
       </div>
 
       </div>
+    </div>
     </div>
   </section>
 
@@ -100,5 +102,9 @@
       <p>&copy; 2025 Mathlytics</p>
     </div>
   </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/mathjs@12.0.0/lib/browser/math.js"></script>
+  <script src="js/matrix-calc.js"></script>
 </body>
 </html>
